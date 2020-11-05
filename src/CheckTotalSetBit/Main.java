@@ -14,5 +14,7 @@ public class Main {
         Scanner sc =new Scanner(System.in);
         Simple obj=new Simple();
         System.out.println(obj.totalSetBits(sc.nextInt()));
+        BrainAlgorithim object=new BrainAlgorithim();
+        System.out.println(object.checkSetBit(sc.nextInt()));
     }
 }
