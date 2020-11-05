@@ -13,6 +13,8 @@ public class Naivemethod {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         LeftShift.checkIthBit(sc.nextInt(),sc.nextInt());
+        RightShift object=new RightShift();
+        object.checkKthBit(sc.nextInt(), sc.nextInt());
 
     }
 }
