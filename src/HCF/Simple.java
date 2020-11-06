@@ -8,7 +8,7 @@
 package HCF;
 
 public class Simple {
-    public int hcfNo(int a,int b){
+    public static int hcfNo(int a,int b){
         int lowerNo=Math.min(a,b);
         while(lowerNo>0){
             if(a%lowerNo==0&&b%lowerNo==0){
