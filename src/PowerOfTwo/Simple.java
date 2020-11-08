@@ -24,6 +24,4 @@ public class Simple {
         Scanner sc=new Scanner(System.in);
         System.out.println(isPowerTwo(sc.nextInt()));
     }
-
-
 }
