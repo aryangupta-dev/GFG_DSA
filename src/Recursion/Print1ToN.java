@@ -9,7 +9,7 @@ package Recursion;
 
 public class Print1ToN {
     static void gprint(int n, int k) {
-
+        // this is a program by tail reecursion which is more effective in time complexity.
         if (n > 0) {
             System.out.println(k);
             gprint(n - 1, k + 1);
