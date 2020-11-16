@@ -12,12 +12,13 @@ public class MakeSubsetOfString {
         int n = str.length();
         int totalSubset = (int) Math.pow(n, 2);
         for (int index = 0; index < totalSubset; index++) {
+            System.out.print("{");
             for (int j = 0; j < n; j++) {
                 if ((index & (1 << j)) > 0) {
                     System.out.print(ch[j]);
                 }
             }
-            System.out.println();
+            System.out.print("} ,");
         }
     }
 }
