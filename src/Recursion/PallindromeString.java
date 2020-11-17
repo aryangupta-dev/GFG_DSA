@@ -7,7 +7,6 @@
 
 package Recursion;
 
-import jdk.swing.interop.SwingInterOpUtils;
 
 public class PallindromeString {
     static boolean pallindrome(String str, int start, int end) {
