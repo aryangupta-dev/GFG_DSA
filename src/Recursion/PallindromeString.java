@@ -7,6 +7,8 @@
 
 package Recursion;
 
+import jdk.swing.interop.SwingInterOpUtils;
+
 public class PallindromeString {
     static boolean pallindrome(String str, int start, int end) {
         if (start == end)
@@ -19,6 +21,8 @@ public class PallindromeString {
 
     public static void main(String[] args) {
         String str = "radar";
+        String anotherString = "JINKS";
         System.out.println(pallindrome(str, 0, str.length() - 1));
+        System.out.println(pallindrome(anotherString, 0, anotherString.length() - 1));
     }
 }
