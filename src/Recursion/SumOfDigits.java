@@ -9,9 +9,10 @@ package Recursion;
 
 public class SumOfDigits {
     static int sum(int n) {
-        if (n < 10)
+        if (n < 10)//returning the last digit.
             return n;
-        return n % 10 + sum(n / 10);
+        //extracting digits from the no n;
+        return n % 10 + sum(n / 10);//recursion for digits
     }
 
     public static void main(String[] args) {
