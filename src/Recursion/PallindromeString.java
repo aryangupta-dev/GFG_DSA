@@ -10,7 +10,10 @@ package Recursion;
 public class PallindromeString {
     static boolean pallindrome(String str, int start, int end) {
         if (start == end)
+            //if both are at same index then
+            // it will return true as it traverse from the whole string
             return true;
+        //recursion and checking occuring.
         return (str.charAt(start) == str.charAt(end)) && pallindrome(str, start + 1, end - 1);
     }
 
