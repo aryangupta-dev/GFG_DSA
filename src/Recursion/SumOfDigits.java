@@ -17,5 +17,6 @@ public class SumOfDigits {
 
     public static void main(String[] args) {
         System.out.println(sum(253));
+        System.out.println(sum(568451484));
     }
 }
