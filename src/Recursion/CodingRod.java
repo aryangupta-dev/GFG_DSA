@@ -23,5 +23,6 @@ public class CodingRod {
 
     public static void main(String[] args) {
         System.out.println(maxcuts(5, 2, 5, 1));
+        System.out.println(maxcuts(15, 3, 2, 5));
     }
 }
