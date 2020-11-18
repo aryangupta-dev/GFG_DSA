@@ -16,6 +16,7 @@ public class CodingRod {
         int res = Math.max(maxcuts(rodLen - firstCut, firstCut, secondCut, thirdCut),
                 Math.max(maxcuts(rodLen - secondCut, firstCut, secondCut, thirdCut),
                         maxcuts(rodLen - thirdCut, firstCut, secondCut, thirdCut)));
+        //recursion stop when the last maxcuts return 0 and -1;
         if (res == -1)
             return -1;
         return res + 1;
@@ -23,6 +24,7 @@ public class CodingRod {
 
     public static void main(String[] args) {
         System.out.println(maxcuts(5, 2, 5, 1));
+        //another input.
         System.out.println(maxcuts(15, 3, 2, 5));
     }
 }
