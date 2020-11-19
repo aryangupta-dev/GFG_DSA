@@ -8,9 +8,15 @@
 package Recursion;
 
 public class Josephus {
+    /*
+     * circular program in which remove the kth person and make the array circular again
+     * with kth +1 as first person.
+     * */
     static int calculate(int n, int kill) {
-        if (n == 1)
+        if (n == 1)//base case when there is only one person left
             return 0;
+        //+ kill because after to rotate the persons and make the kth +1 at zero index.
+        //%n bcz after adding a k it can be more than n .
         return (calculate(n - 1, kill) + kill) % n;
     }
 
