@@ -30,4 +30,9 @@ public class SecondLargestNo {
         }
         return largest;
     }
+
+    public static void main(String[] args) {
+        int[] arr = {1, 5, 21, 8, 89, 585};
+        System.out.println(secondLargest(arr));
+    }
 }
