@@ -9,7 +9,16 @@ package Arrays;
 
 public class SecondLargestNo {
     static int secondLargest(int arr[]) {
-
+        int largest = greatest(arr);
+        int res = -1;
+        for (int i = 0; i < arr.length; i++) {
+            if (largest != arr[i]) {
+                if (res < arr[i]) {
+                    res = arr[i];
+                }
+            }
+        }
+        return res;
     }
 
     static int greatest(int[] arr) {
