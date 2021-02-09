@@ -14,13 +14,14 @@ public class Josephus {
      * */
     static int calculate(int n, int kill) {
         if (n == 1)//base case when there is only one person left
-            return 0;
+            return 1;
         //+ kill because after to rotate the persons and make the kth +1 at zero index.
         //%n bcz after adding a k it can be more than n .
-        return (calculate(n - 1, kill) + kill) % n;
+        int k = (calculate(n - 1, kill) + kill - 1) % n + 1;
+        return k;
     }
 
     public static void main(String[] args) {
-        System.out.println(calculate(5, 3));
+        System.out.println(calculate(5, 2));
     }
 }
