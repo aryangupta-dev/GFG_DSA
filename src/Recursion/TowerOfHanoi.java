@@ -22,7 +22,7 @@ public class TowerOfHanoi {
     }
 
     public static void main(String[] args) {
-        int n = 2;
+        int n = 4;
         z = towerOfHanoi(n, 'A', 'B', 'C', z);
         System.out.println(z);
     }

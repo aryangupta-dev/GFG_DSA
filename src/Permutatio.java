@@ -13,7 +13,7 @@ class Permutatio {
         permutation.permute(str, 0, n - 1);
     }
 
-    private void permute(int[] str, int l, int r) {
+    public void permute(int[] str, int l, int r) {
         if (l == r) {
             for (int a : str) {
                 System.out.print(a + " ");
@@ -30,7 +30,6 @@ class Permutatio {
 
     public int[] swap(int[] a, int i, int j) {
         int temp;
-
         temp = a[i];
         a[i] = a[j];
         a[j] = temp;
