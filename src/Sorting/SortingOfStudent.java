@@ -54,7 +54,17 @@ class Solution {
 
             testCases--;
         }
-
+        Collections.sort(studentList, new Comparator<Student>() {
+            public int compare(Student s1, Student s2) {
+                if ((s1.getCgpa() * 100) != (s2.getCgpa() * 100)) {
+                    return (int) ((s2.getCgpa() * 1000) - (s1.getCgpa() * 1000));
+                } else if (!(s1.getFname().equals(s2.getFname()))) {
+                    return s1.getFname().compareTo(s2.getFname());
+                } else {
+                    return s1.getId() - s2.getId();
+                }
+            }
+        });
 
         for (Student st : studentList) {
             System.out.println(st.getFname());
