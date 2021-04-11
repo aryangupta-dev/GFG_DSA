@@ -28,7 +28,6 @@ public class Chaining {
         stack.get(res).add(key);
         System.out.println("Inserted at index " + res);
     }
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the size of the headers in the hashing");
@@ -40,6 +39,13 @@ public class Chaining {
         }
         System.out.println("Enter the element to delete");
         object.remove(sc.nextInt());
+        System.out.println("Enter the element to search ");
+        boolean res = object.search(sc.nextInt());
+        if (res) {
+            System.out.println("Entered element founded ");
+        } else {
+            System.out.println("Element not founded");
+        }
 
 
     }
@@ -58,4 +64,6 @@ public class Chaining {
             System.out.println("Not find that ");
         }
     }
+
+
 }
