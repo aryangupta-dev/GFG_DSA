@@ -25,4 +25,9 @@ public class Chaining {
         stack.get(res).remove((Integer) key);
         System.out.println("Deleted the key " + key);
     }
+
+    boolean search(int key) {
+        int res = key % bucket;
+        return stack.get(res).contains((Integer) key);
+    }
 }
