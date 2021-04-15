@@ -26,7 +26,12 @@ public class QuickSort {
         return i + 1;
     }
 
-    void partition(int[] arr) {
+    void partition(int[] arr, int low, int high) {
+        if (low < high) {
+            int p = quickSort(arr, low, high);
+            partition(arr, low, p - 1);
+            partition(arr, p + 1, high);
 
+        }
     }
 }
