@@ -10,6 +10,7 @@ package Sorting;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Scanner;
 
 import static java.util.Collections.sort;
 
@@ -25,5 +26,20 @@ public class ChocolateProblem {
             res = Math.min(temp, res);
         }
         return res;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        ArrayList<Integer> arr = new ArrayList<>();
+        System.out.println("Enter the size");
+        int size = sc.nextInt();
+        for (int i = 0; i < size; i++) {
+            System.out.println("Enter the element");
+            arr.add(sc.nextInt());
+        }
+        System.out.println("Enter the no of childrens");
+        int m = sc.nextInt();
+        ChocolateProblem obj = new ChocolateProblem();
+        System.out.println(obj.minDifference(arr, arr.size(), m));
     }
 }
