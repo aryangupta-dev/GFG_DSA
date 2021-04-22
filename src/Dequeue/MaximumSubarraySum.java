@@ -32,6 +32,7 @@ public class MaximumSubarraySum {
 
             obj.addLast(i);
         }
+        System.out.println(arr[obj.peek()]);
     }
 
     public static void main(String[] args) {
