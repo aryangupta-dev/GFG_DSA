@@ -23,5 +23,6 @@ public class PreOrder {
         obj.right = new Node(40);
         obj.left.right = new Node(50);
         obj.right.left = new Node(60);
+        traversal(obj);
     }
 }
