@@ -9,6 +9,7 @@ package Tree;
 
 import java.util.Deque;
 import java.util.LinkedList;
+// line by line printing of the branches of the tress of same level
 
 public class Method2LevelLineByLine {
     public static void traversal(Node root) {

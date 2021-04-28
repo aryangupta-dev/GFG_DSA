@@ -10,7 +10,7 @@ package Tree;
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.LinkedList;
-
+// simply printing of all the nodes in a single line
 public class LevelOrder {
     public static void traversal(Node root) {
         Deque<Node> object = new LinkedList<>();
