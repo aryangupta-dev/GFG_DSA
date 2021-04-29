@@ -1,18 +1,18 @@
 /*   Created by IntelliJ IDEA.
  *   Author: Aryan Gupta (ag2602)
  *   Date: 4/29/2021
- *   Time: 2:59 PM
- *   File: SizeOfTree.java
+ *   Time: 4:01 PM
+ *   File: MaxNodeTree.java
  */
 
 package Tree;
-//total no of nodes in a tree.
-public class SizeOfTree {
-    public static int size(Node root) {
+
+public class MaxNodeTree {
+    public static int maxNode(Node root) {
         if (root == null) {
-            return 0;
+            return Integer.MIN_VALUE;
         }
-        return 1 + size(root.left) + size(root.right);
+        return Math.max(root.data, Math.max(maxNode(root.left), maxNode(root.right)));
     }
 
     public static void main(String[] args) {
@@ -22,6 +22,6 @@ public class SizeOfTree {
         obj.right = new Node(40);
         obj.left.right = new Node(50);
         obj.right.left = new Node(60);
-        System.out.println(size(obj));
+        System.out.println(maxNode(obj));
     }
 }
