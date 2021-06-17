@@ -8,6 +8,15 @@
 package Heap;
 
 public class BinaryHeap {
+    public static void main(String[] args) {
+        HeapFunction h = new HeapFunction(11);
+        h.insert(3);
+        h.insert(2);
+        h.insert(15);
+        h.insert(20);
+        System.out.println(h.extractMin());
+    }
+
     static class HeapFunction {
         int size;
         int capacity;
@@ -19,15 +28,15 @@ public class BinaryHeap {
             arr = new int[c];
         }
 
-        public int left(int i) {
+        public static int left(int i) {
             return (2 * i) + 1;
         }
 
-        public int right(int i) {
+        public static int right(int i) {
             return (2 * i) + 2;
         }
 
-        public int parent(int i) {
+        public static int parent(int i) {
             return (i - 1) / 2;
         }
 
@@ -58,6 +67,23 @@ public class BinaryHeap {
                 swap(arr[smallest], arr[c]);
                 heapify(smallest);
             }
+        }
+
+        public int extractMin() {
+            if (size == 0) {
+                return Integer.MAX_VALUE;
+            } else if (size == 1) {
+                size--;
+                return arr[size];
+            } else {
+                int temp = arr[size - 1];
+                arr[size - 1] = arr[0];
+                arr[0] = temp;
+                size--;
+                heapify(0);
+                return arr[size];
+            }
+
         }
 
         public void swap(int a, int b) {
