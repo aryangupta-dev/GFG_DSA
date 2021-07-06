@@ -7,6 +7,8 @@
 
 package Arrays;
 
+import java.util.Scanner;
+
 public class SecondLargestNo {
     static int secondLargest(int arr[]) {
         int largest = greatest(arr);
@@ -32,7 +34,12 @@ public class SecondLargestNo {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 5, 21, 8, 89, 585};
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
         System.out.println(secondLargest(arr));
     }
 }
